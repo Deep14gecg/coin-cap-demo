@@ -1,7 +1,7 @@
 <!-- Navigation/TitleBar -->
 <div>
-  <mat-toolbar color="primary">
-    <span>Crypto Currency Market Watch</span>
+  <mat-toolbar color='primary'>
+    <span>Cryptocurrency Market Watch</span>
   </mat-toolbar>
 </div>
 <!-- Navigation/TitleBar  Ended -->
@@ -59,7 +59,7 @@
             <!--Trade  Column -->
             <ng-container matColumnDef="shapeshift">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Trade </th>
-              <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.shapeshift}} </td>
+              <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{trades(row.shapeshift)}} </td>
             </ng-container>
       
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

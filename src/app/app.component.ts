@@ -54,6 +54,13 @@ export class AppComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+  trades(value) {
+    if (value) {
+      return 'Buy/Sell';
+    } else {
+      return '-';
+    }
+  }
   updates(name, data) {
     if (name) {
       for (let i = 0; i < Object.keys(this.dataSource['data']).length; i++) {
