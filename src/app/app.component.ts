@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   constructor(private socket: Socket, private http: HttpClient) { }
   ngOnInit() {
-    this.http.get('http://coincap.io/front').subscribe((res) => {
+    this.http.get('https://coincap.io/front').subscribe((res) => {
       console.log(res);
       this.dataSource = new MatTableDataSource(Object.values(res));
       this.dataSource.paginator = this.paginator;
