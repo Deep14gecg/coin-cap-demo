@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { HttpClientModule } from '@angular/common/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { HomeComponent } from './Modules/home/home.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const config: SocketIoConfig = { url: 'https://coincap.io', options: {} };
-
+const routes: Routes = [
+  { path: '', component: HomeComponent }
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     SocketIoModule.forRoot(config),
+    RouterModule.forRoot(routes),
     HttpClientModule,
     MatToolbarModule,
     NoopAnimationsModule,

@@ -1,0 +1,25 @@
+.Table{
+    margin: 20px;
+    display: inline-block !important;
+
+}
+
+table {
+    width: 100% !important;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .mat-card, 
+  .mat-card-content {
+    overflow-x: scroll
+    
+  }
+  td, th {
+    width: 10%;
+  }
+  td.mat-cell, td.mat-footer-cell, th.mat-header-cell  {
+      padding: 10px !important;
+  }
